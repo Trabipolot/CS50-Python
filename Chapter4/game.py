@@ -17,10 +17,10 @@ def randomize(level: int) -> int:
 
 def get_guess(level: int, random_number: int) -> str:
     while True:
-        guess: int = input_number(
-            f"Enter your guess (integer between 1 and {level}): ", 0, level
-        )
-        return check_guess(guess, random_number)
+    guess: int = input_number(
+        f"Enter your guess (integer between 1 and {level}): ", 0, level
+    )
+    return check_guess(guess, random_number)
 
 
 def check_guess(guess: int, random_number: int) -> bool:
