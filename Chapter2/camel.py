@@ -5,9 +5,7 @@ def main():
 
 
 def convert_to_snake_case(input):
-    snake_case = "".join(["_" + i.lower() if i.isupper() else i for i in input]).lstrip(
-        "_"
-    )
+    snake_case = "".join(["_" + i.lower() if i.isupper() else i for i in input]).lstrip("_")
     return snake_case
 
 

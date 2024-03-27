@@ -24,7 +24,7 @@ def check_input():
         return "random"
     else:
         print(
-            "Invalid Input. Please adjust arguments toteh following format: -f/--font 'supported font'"
+            "Invalid Input. Please adjust arguments to the following format: -f/--font 'supported font'"
         )
         sys.exit()
 
