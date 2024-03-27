@@ -16,7 +16,6 @@ def randomize(level: int) -> int:
 
 
 def get_guess(level: int, random_number: int) -> str:
-    while True:
     guess: int = input_number(
         f"Enter your guess (integer between 1 and {level}): ", 0, level
     )
