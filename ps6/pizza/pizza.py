@@ -1,4 +1,3 @@
-import requests
 import sys
 from tabulate import tabulate
 import csv
