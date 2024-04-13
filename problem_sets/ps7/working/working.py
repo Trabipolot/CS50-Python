@@ -6,16 +6,15 @@ def main():
     print(convert(input("Hours: ").strip()))
 
 
-def adjust_hours(hour: str, minute: str, am_pm: str) -> str:
+def adjust_hours(hour, minute, am_pm) -> str:
     hour = int(hour)
     if minute is None:
         minute = "00"
     if hour == 12 and am_pm == "AM":
         return f"00:{minute}"
     elif am_pm == "PM" and hour != 12:
-        return f"{hour + 12}:{minute}"
-    else:
-        return f"{hour}:{minute}"
+        hour += 12
+    return f"{hour:02}:{minute}"
 
 
 def convert(s):
@@ -27,8 +26,7 @@ def convert(s):
         time2 = adjust_hours(m.group(4), m.group(5), m.group(6))
         return f"{time1} to {time2}"
     else:
-        print("Value Error: Input does not match the supported format")
-        sys.exit()
+        raise ValueError
 
 
 if __name__ == "__main__":
